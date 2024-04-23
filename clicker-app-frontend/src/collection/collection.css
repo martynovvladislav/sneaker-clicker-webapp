@@ -1,0 +1,37 @@
+#main-collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+#backButton-collection {
+    margin-right: auto;
+    margin-left: 10px;
+    margin-top: 24px;
+}
+
+#backButton-collection:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.17);
+}
+
+#show-collection {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.collection-item {
+    height: 200px;
+}
+
+.collection-item img {
+    height: 70%;
+}
+
+.collection-item h4 {
+    margin: 0;
+}

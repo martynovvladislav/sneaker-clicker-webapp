@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: clicker-app-backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME:clicker_app_db_user}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081

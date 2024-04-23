@@ -1,0 +1,89 @@
+#backButton:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.17);
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    margin-bottom: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+}
+
+#coin-amount-lootboxes {
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: end;
+    align-items: center;
+}
+
+#lootbox img {
+    transition: 300ms;
+}
+
+#lootbox img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#store {
+    margin-top: auto;
+    margin-bottom: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 10px;
+}
+
+#store img {
+    height: 100%;
+}
+
+#buy-button {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40%;
+    width: 30%;
+}
+
+#buy-button:hover {
+    background-color: rgba(255, 255, 255, 0.17);
+}
+
+#result {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: #242424;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#result img {
+    height: 30%;
+}
