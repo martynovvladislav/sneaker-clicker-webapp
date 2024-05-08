@@ -7,12 +7,14 @@ import com.martynov.clickerAppBackend.domain.repositories.UserRepository;
 import com.martynov.clickerAppBackend.dtos.SneakerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class SneakerService {
     private final SneakerRepository sneakerRepository;
     private final UserRepository userRepository;

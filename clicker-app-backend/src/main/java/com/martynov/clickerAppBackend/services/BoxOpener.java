@@ -6,6 +6,7 @@ import com.martynov.clickerAppBackend.dtos.UserDto;
 import com.martynov.clickerAppBackend.exceptions.UserDoesNotExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class BoxOpener {
     private final UserService userService;
     private final SneakerService sneakerService;

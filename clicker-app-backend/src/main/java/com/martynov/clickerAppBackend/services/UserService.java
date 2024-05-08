@@ -9,6 +9,7 @@ import com.martynov.clickerAppBackend.exceptions.UserAlreadyExistException;
 import com.martynov.clickerAppBackend.exceptions.UserDoesNotExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,6 +17,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final SneakerRepository sneakerRepository;
 
+    @Transactional
     public void addUser(Long id) {
         if (userRepository.findUserById(id).isPresent()) {
             throw new UserAlreadyExistException();
@@ -27,6 +29,7 @@ public class UserService {
         userRepository.save(user);
     }
 
+    @Transactional
     public void deleteUser(Long id) {
         if (userRepository.findUserById(id).isEmpty()) {
             throw new UserDoesNotExistException();
@@ -36,6 +39,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    @Transactional
     public void updateUser(UserDto userDto) {
         if (userRepository.findUserById(userDto.getId()).isEmpty()) {
             throw new UserDoesNotExistException();
@@ -46,6 +50,7 @@ public class UserService {
         userRepository.save(user);
     }
 
+    @Transactional(readOnly = true)
     public UserDto getUser(Long id) {
         if (userRepository.findUserById(id).isEmpty()) {
             throw new UserDoesNotExistException();
@@ -58,6 +63,7 @@ public class UserService {
         );
     }
 
+    @Transactional
     public boolean addSneaker(Long userId, Long sneakerId) {
         if (userRepository.findUserById(userId).isEmpty() || sneakerRepository.findById(sneakerId).isEmpty()) {
             return false;
